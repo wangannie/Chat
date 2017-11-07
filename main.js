@@ -18,5 +18,19 @@ function pushMessage(event) {
     $('#messageInput').val('');
   }
 }
-
 $('#messageInput').keypress(pushMessage);
+chatData.on("child_added", showMessage);
+
+function showMessage(msg){
+  var message = msg.val();
+  var messageSender = message.name;
+  var messageContent = message.text;
+
+  var messageE1 = $("<div/>").addClass("message");
+  var senderE1 = $("<span/>").text(messageSender + ": ");
+  var contentE1 = $("<span/>").text(messageContent);
+
+  messageEl.append(senderEl);
+messageEl.append(contentEl);
+$('#messages').append(messageEl);
+}
