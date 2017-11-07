@@ -26,11 +26,11 @@ function showMessage(msg){
   var messageSender = message.name;
   var messageContent = message.text;
 
-  var messageE1 = $("<div/>").addClass("message");
-  var senderE1 = $("<span/>").text(messageSender + ": ");
-  var contentE1 = $("<span/>").text(messageContent);
+  var messageEl = $("<div/>").addClass("message");
+  var senderEl = $("<span/>").text(messageSender + ": ");
+  var contentEl = $("<span/>").text(messageContent);
 
-  messageEl.append(senderEl);
-messageEl.append(contentEl);
-$('#messages').append(messageEl);
+    messageEl.append(senderEl);
+  messageEl.append(contentEl);
+  $('#messages').append(messageEl);
 }
