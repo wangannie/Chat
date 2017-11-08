@@ -30,7 +30,7 @@ function showMessage(msg){
   var senderEl = $("<span/>").text(messageSender + ": ");
   var contentEl = $("<span/>").text(messageContent);
 
-    messageEl.append(senderEl);
+  messageEl.append(senderEl);
   messageEl.append(contentEl);
   $('#messages').append(messageEl);
 }
